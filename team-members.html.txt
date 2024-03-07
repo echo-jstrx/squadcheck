@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    </style>
+</head>
+<body>
+    <div class="horizontal-nav">
+        <div class="logo-container">
+            <a href="#" class="active">www.squad-check.com</a>
+        </div>
+        <div class="nav-container">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Help</a>
+        </div>
+    </div>
+    <div class="vertical-nav">
+        <a href="#">Profile</a>
+        <a href="#">My Company</a>
+        <a href="#">All Projects</a>
+        <a href="#" class="active">Team Members</a>
+        <a href="#">Assigned Tasks</a>
+        <a href="#">Squad Check</a>
+        <a href="#">Project Management</a>
+        <a href="#">Document Control</a>
+        <a href="#">Purchasing</a>
+        <a href="#">Inventory Management</a>
+        <a href="#">Standard Forms</a>
+        <a href="#">Timesheet</a>
+        <a href="#">Notifications</a>
+        <hr>
+        <a href="#">Feedback</a>
+        <a href="#">Logout</a>
+    </div>	
+    <div class="pno-disp">
+        <!-- PHP echo project number from database -->
+        <h3>P3975 - Example Project Title 1</h3>
+    </div>
+    <div class="team-container">
+        <!-- PHP for each loop from here for all members within project -->
+        <div class="team-member">
+            <div class="<img-container>">
+                <img src="image.jpg" alt="team member 1">
+                <!-- db query "select concat(prefix,' ',first_name,' ',last_name) as full_name from users where ..."  -->
+            </div>
+            <div class="member-details">
+                <!-- Team member -->
+                <h3>Mr. John Doe</h3>
+                <!-- Team member role within this project -->
+                <p>Project Manager</p>
+                <!-- Team member qualifications and certificates -->
+                <p>RPEQ, NER, CPEng</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="img-container">
+                <img src="profile1.jpg" alt="Team Member 1">
+            </div>
+            <div class="member-details">
+                <!-- Team member -->
+                <h3>Ms. Jane Smith</h3>
+                <!-- Team member role within this project -->
+                <p>Electrical Engineer</p>
+                <!-- Team member qualifications and certificates -->
+                <p>NER, Type B, EIEAust</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="img-container">
+                <!-- team member company photo -->
+                <img src="profile1.jpg" alt="Team Member 1">
+            </div>
+            <div class="member-details">
+                <!-- Team member -->
+                <h3>Dr. Joe Smo</h3>
+                <!-- Team member role within this project -->
+                <p>Mechanical Engineer</p>
+                <!-- Team member qualifications and certificates -->
+                <p>PhD., NER, MIEAust</p>
+            </div>
+        </div>
+    </div>
+
+     <div class="pno-disp">
+        <!-- PHP echo project number from database -->
+        <h3>P3998 - Example Project Title 2</h3>
+    </div>
+    <div class="team-container">
+        <!-- PHP for each loop from here for all members within project -->
+        <div class="team-member">
+            <div class="<img-container>">
+                <img src="image.jpg" alt="team member 1">
+                <!-- db query "select concat(prefix,' ',first_name,' ',last_name) as full_name from users where ..."  -->
+            </div>
+            <div class="member-details">
+                <!-- Team member -->
+                <h3>Mr. John Doe</h3>
+                <!-- Team member role within this project -->
+                <p>Project Manager</p>
+                <!-- Team member qualifications and certificates -->
+                <p>RPEQ, NER, CPEng</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="img-container">
+                <img src="profile1.jpg" alt="Team Member 1">
+            </div>
+            <div class="member-details">
+                <!-- Team member -->
+                <h3>Ms. Jane Smith</h3>
+                <!-- Team member role within this project -->
+                <p>Electrical Engineer</p>
+                <!-- Team member qualifications and certificates -->
+                <p>NER, Type B, EIEAust</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="img-container">
+                <!-- team member company photo -->
+                <img src="profile1.jpg" alt="Team Member 1">
+            </div>
+            <div class="member-details">
+                <!-- Team member -->
+                <h3>Dr. Joe Smo</h3>
+                <!-- Team member role within this project -->
+                <p>Mechanical Engineer</p>
+                <!-- Team member qualifications and certificates -->
+                <p>PhD., NER, MIEAust</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

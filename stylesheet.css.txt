@@ -1,0 +1,382 @@
+
+                main {
+        margin-top: 75px;
+        /* margin-left: 50px; */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin-left: 250px;
+            margin-top: 75px;
+        }
+
+        /* Style for the vertical navigation bar */
+        .vertical-nav {
+        width: 250px;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        overflow-x: hidden;
+        padding-top: 50px;
+        margin-top: 50px;
+        }
+
+        /* Style for the links in the vertical navigation bar */
+        .vertical-nav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+        width: 250px;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style for the active link in the vertical navigation bar */
+        .vertical-nav a.active {
+        background-color: #4CAF50;
+        color: white;
+        }
+
+        /* Style for the horizontal navigation bar */
+        .horizontal-nav {
+        background-color: #333;
+        overflow: hidden;
+        height: 50px;
+        z-index: 2;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        }
+
+        /* Style for the links in the horizontal navigation bar */
+        .horizontal-nav a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        margin-left: 200px;
+        width: 100px;
+        height: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style for the active link in the horizontal navigation bar */
+        .horizontal-nav a.active {
+        background-color: #4CAF50;
+        color: white;
+        }
+
+        /* Style for the widget in the center */
+        .widget {
+        margin: 25px;
+        width: 1250px;
+        padding: 25px;
+        border: 1px solid #ccc;
+        text-align: center;
+        border-radius: 25px;
+        background-color: white;
+        box-shadow: 1px 2px 1px 2px  rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-container a{
+            margin-left: 0;
+            width: 218px;
+        }
+
+        /* SQUAD CHECK FORM CSS ONLY */
+        h6, html {
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        h2, .h2{
+            text-align: center;
+            margin: 0;
+        }
+
+        .h3 {
+            font-size: 12px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .tableinput {
+            border: 1px;
+            border-style: dashed;
+            padding: 5px 10px;  
+        }
+        .sq-form-tb select {
+            min-width: 100%;
+            min-height: 100%;
+            border: none;
+            padding: 5px;
+        }
+
+        .formcontainer th {
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 5px; margin: 0;
+        }
+
+        .formcontainer td {
+            border: 1px;
+            border-style: dashed;
+            min-width: 50px;
+        }
+
+        .formcontainer td a {
+            padding: 5px 10px; 
+        }
+        .sq-cmt{
+            width: 500px; height: 100px;
+            padding: 10px;
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .formcontainer td input {
+            border: none;
+            padding: 5px 10px; 
+            height: 100%; width: 100%;
+        }
+        .formcontainer td input:focus{
+            border: none;
+        }
+
+        .submit {
+            padding: 10px 20px; margin: 10px;
+            background-color: rgb(75, 75, 255);
+            border: none;
+            border-radius: 15px;
+            color: white;
+        }
+
+        .submit:hover{
+            color: white;
+            background-color: rgb(255, 75, 75);
+            cursor: pointer;
+        }
+
+        #file {
+            max-width: 225px;
+        }
+
+        .chkbxcontainer{
+            display: flex;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .btncontainer {
+            display: flex;
+            justify-content: center;
+        }
+
+        .subformcontainer {
+            display: flex;
+        }
+
+        .inputcontainer {
+            margin: 25px 25px 10px;
+        }
+
+        .inpt{
+            padding: 5px;
+        }
+
+        .formcontainer{
+            display: flex;
+            justify-content: center;
+            min-width: fit-content;
+        }
+
+        .rgt {
+            align-self: center;
+        }
+
+        .logo-container a {
+            font-size: 18px;
+        }
+
+        .pending-container{
+            min-width: fit-content;
+            max-width: 1250px;
+        }
+
+        .pending-table{
+            width: 1250px;
+            padding: 5px;
+            gap: 0;
+        }
+
+        .pending-table td, .pending-table th {
+            width: 100px;
+            border: none;
+            text-align: center;
+        }
+
+        .pending-table th{
+            font-size: 16px ;
+        }
+
+        .pending-table td{
+            font-size: 14px ;
+        }
+
+        .pending-table tr{
+            border: dashed 1px;
+        }
+
+        .pending-table a{
+            text-decoration: underline;
+            cursor: pointer;
+            color: blue;
+        }
+        /* Basic styling */
+        .team-container {
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; Center horizontally */
+            max-width: 800px;
+            margin: 0 50px;
+        }
+        .team-member {
+            /* text-align: left; */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px; /* Rectangular container */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Spacing between team members */
+            display: flex;
+        }
+        .team-member img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%; /* Circular profile picture */
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .team-member h3 {
+            font-size: 16px;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+        .team-member p {
+            font-size: 14px;
+            color: #777;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+        .member-details{
+            margin-left: 20px; padding: 10px;
+        }
+        .pno-disp{
+            margin-left: 50px;
+        }
+
+        /* --------------------------------------------------------- */
+        /*  */
+        .pro-container {
+            max-width: 800px;
+            min-width: 800px;
+            margin: 50px;
+            /* padding: 20px; */
+        }
+        .p-h1 {
+            font-size: 24px;
+            border-bottom: solid 1px;
+        }
+        .p-h2{
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .p-h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .document-list {
+            margin-bottom: 20px;
+        }
+        .document-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 5px 0px;
+        }
+        .document-item .date {
+            font-size: 14px;
+            color: #777;
+        }
+        .stock-summary {
+            background-color: #fff;
+            padding: 20px; margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .psum-tb{
+            width: 100%;
+        }
+        .psum-tb th{
+            min-width: 125px;
+            text-align: left;
+        }
+        .psum-tb tr{
+            min-width: 500px;
+            text-align: left;
+        }
+        .psum-tb tr:hover{
+            background-color: yellow;
+        }
+        .p-man-container{
+            padding: 25px; margin-bottom: 10px;
+            /* border-top: solid #777 1px; */
+        }
+        .stdwid{
+            min-width: 200px;
+            text-align: left;
+        }
+
+        .document-link{
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+            display: inherit;
+        }
+        .document-link:hover{
+            text-decoration: underline;
+        }
+        .p-hd-btn{
+            display: inherit;
+            border: none;
+            background-color: inherit;
+            margin: 0px; padding: 0px;
+            cursor: pointer;
+            min-width: 100%;
+        }
+        .pm-sub-container {
+            margin-left: 20px; padding-left: 20px;
+            border-left: solid 1px;
+        }
+        .total-tble-bs{
+            border-top: solid 1px;
+        }

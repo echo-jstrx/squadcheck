@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="resources/styles.css">
+</head>
+<body>
+<!-- Vertical Navigation Bar -->
+<div class="vertical-nav">
+    <a href="#">Profile</a>
+    <a href="#">My Company</a>
+    <a href="#">All Projects</a>
+    <a href="#">Team Members</a>
+    <a href="#">Assigned Tasks</a>
+    <a href="#" class="active">Squad Check</a>
+    <a href="#">Project Management</a>
+    <a href="#">Document Control</a>
+    <a href="#">Purchasing</a>
+    <a href="#">Inventory Management</a>
+    <a href="#">Standard Forms</a>
+    <a href="#">Timesheet</a>
+    <a href="#">Notifications</a>
+    <hr>
+    <a href="#">Feedback</a>
+    <a href="#">Logout</a>
+</div>	
+
+<main>
+<!-- Horizontal Navigation Bar -->
+    <div class="horizontal-nav">
+        <div class="logo-container">
+            <a href="#" class="active">SquadCheck.com</a>
+        </div>
+        <div class="nav-container">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Help</a>
+        </div>
+    </div>
+
+    <!-- Widget in the Center -->
+    <div class="container">
+        <div class="widget">
+            <p class="h3">SYSTEM FOR CHECKING AND/OR APPROVAL OF 
+                DRAWINGS AND TECHNICAL DOCUMENTS (SQUAD CHECK)</p><br><br>
+            <h2>Squad Check</h2>
+            <p class="h2">Engineering Peer Review</p>
+            <div class="formcontainer">
+                <form name="sqchkfrm" method="post">
+                    <div class="subformcontainer">
+                        <div class="inputcontainer">
+                            <label for="pno">Project No.</label>
+                            <input class="inpt" type="text" name="pno" placeholder='Eg. "P3999"' required>
+                        </div>
+
+                        <div class="inputcontainer">
+                            <label for="rtn">Return Within:</label>
+                            <input class="inpt" type="text" name="rtn" id="rtn" placeholder='Eg. "10"'>
+                            <label for="rtn">days</label>
+                        </div>
+
+                        <div class="inputcontainer rgt">
+                            <!-- PM will be updaed via PHP db depending on P#### -->
+                            <label class="inpt">Project Manager: <b>PM</b></label>
+                        </div>
+                    </div>
+                    <br>
+                    <table class="sq-form-tb">
+                        <tr>
+                            <th><label for="document">Add Document</label></th>
+                            <th><label for="qno">Document Q No.</label>
+                            <th><label for="dset">Document Set</label>
+                            <th><label for="dtype">Document Type</label>
+                            <th><label for="dno">Document Number</label>
+                            <th><label for="rno">Revision No.</label></th>
+                            <th><label for="dtitle">Document Title</label></th>
+                            <th><label for="CHK1">Mech</label></th>
+                            <th><label for="CHK2">Valves</label></th>
+                            <th><label for="CHK3">Piping</label></th>
+                            <th><label for="CHK4">Vessels</label></th>
+                            <th><label for="CHK5">Elec</label></th>
+                            <th><label for="CHK6">Combust.</label></th>
+                            <th><label for="CHK7">Q.A.</label></th>
+                        </tr>
+                        <tr>
+                            <td><input type="file" id="file" name="document"></td>
+                            <td><input type="input" name="qno" value='Q'></td>
+                            <td class="dset"><select class="dset">
+                                <option>-</option>    
+                                <option>X-</option> 
+                                <option>A-</option> 
+                                <option>B-</option> 
+                                <option>C-</option> 
+                                <option>D-</option> 
+                                <option>E-</option> 
+                                <option>F-</option> 
+                                <option>G-</option> 
+                                <option>H-</option> 
+                                <option>I-</option> 
+                                <option>J-</option> 
+                                <option>K-</option> 
+                                <option>L-</option> 
+                                <option>M-</option> 
+                                <option>N-</option> 
+                                <option>O-</option> 
+                                <option>P-</option> 
+                                <option>Q-</option> 
+                                <option>R-</option> 
+                                <option>S-</option> 
+                                <option>T-</option> 
+                                <option>U-</option> 
+                                <option>V-</option> 
+                                <option>W-</option> 
+                                <option>X-</option>
+                                <option>Y-</option>
+                                <option>Z-</option>
+                            </select></td><td class="dtype"><select class="dset">
+                                <option>-</option>
+                                <option>C</option>    
+                                <option>DS</option> 
+                                <option>S</option> 
+                                <option>L</option> 
+                                <option>G</option> 
+                                <option>M</option> 
+                                <option>E</option> 
+                                <option>P</option> 
+                                <option>W</option> 
+                            </select></td>
+                            <td><input type="input" name="qno" placeholder='001'></td>
+                            <td class="rno"><select class="dset">
+                                <option>D1</option>    
+                                <option>D2</option> 
+                                <option>D3</option> 
+                                <option>D4</option> 
+                                <option>D5</option> 
+                                <option>D6</option> 
+                                <option>D7</option> 
+                                <option>D8</option> 
+                                <option>D9</option> 
+                                <option>0</option>
+                            </select></td>
+                            <td><input type="input" name="dtitle" placeholder='Eg. "Functional Description"''></td>
+                            <td><input type="checkbox" name="CHK1"></td>
+                            <td><input type="checkbox" name="CHK2"></td>
+                            <td><input type="checkbox" name="CHK3"></td>
+                            <td><input type="checkbox" name="CHK4"></td>
+                            <td><input type="checkbox" name="CHK5"></td>
+                            <td><input type="checkbox" name="CHK6"></td>
+                            <td><input type="checkbox" name="CHK7"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="file" id="file" name="document"></td>
+                            <td><input type="input" name="qno" value='Q'></td>
+                            <td class="dset"><select class="dset">
+                                <option>-</option>    
+                                <option>X-</option> 
+                                <option>A-</option> 
+                                <option>B-</option> 
+                                <option>C-</option> 
+                                <option>D-</option> 
+                                <option>E-</option> 
+                                <option>F-</option> 
+                                <option>G-</option> 
+                                <option>H-</option> 
+                                <option>I-</option> 
+                                <option>J-</option> 
+                                <option>K-</option> 
+                                <option>L-</option> 
+                                <option>M-</option> 
+                                <option>N-</option> 
+                                <option>O-</option> 
+                                <option>P-</option> 
+                                <option>Q-</option> 
+                                <option>R-</option> 
+                                <option>S-</option> 
+                                <option>T-</option> 
+                                <option>U-</option> 
+                                <option>V-</option> 
+                                <option>W-</option> 
+                                <option>X-</option>
+                                <option>Y-</option>
+                                <option>Z-</option>
+                            </select></td><td class="dtype"><select class="dset">
+                                <option>-</option>
+                                <option>C</option>    
+                                <option>DS</option> 
+                                <option>S</option> 
+                                <option>L</option> 
+                                <option>G</option> 
+                                <option>M</option> 
+                                <option>E</option> 
+                                <option>P</option> 
+                                <option>W</option> 
+                            </select></td>
+                            <td><input type="input" name="qno" placeholder='001'></td>
+                            <td class="rno"><select class="dset">
+                                <option>D1</option>    
+                                <option>D2</option> 
+                                <option>D3</option> 
+                                <option>D4</option> 
+                                <option>D5</option> 
+                                <option>D6</option> 
+                                <option>D7</option> 
+                                <option>D8</option> 
+                                <option>D9</option> 
+                                <option>0</option>
+                            </select></td>
+                            <td><input type="input" name="dtitle" placeholder='Eg. "Functional Description"''></td>
+                            <td><input type="checkbox" name="CHK1"></td>
+                            <td><input type="checkbox" name="CHK2"></td>
+                            <td><input type="checkbox" name="CHK3"></td>
+                            <td><input type="checkbox" name="CHK4"></td>
+                            <td><input type="checkbox" name="CHK5"></td>
+                            <td><input type="checkbox" name="CHK6"></td>
+                            <td><input type="checkbox" name="CHK7"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="file" id="file" name="document"></td>
+                            <td><input type="input" name="qno" value='Q'></td>
+                            <td class="dset"><select class="dset">
+                                <option>-</option>    
+                                <option>X-</option> 
+                                <option>A-</option> 
+                                <option>B-</option> 
+                                <option>C-</option> 
+                                <option>D-</option> 
+                                <option>E-</option> 
+                                <option>F-</option> 
+                                <option>G-</option> 
+                                <option>H-</option> 
+                                <option>I-</option> 
+                                <option>J-</option> 
+                                <option>K-</option> 
+                                <option>L-</option> 
+                                <option>M-</option> 
+                                <option>N-</option> 
+                                <option>O-</option> 
+                                <option>P-</option> 
+                                <option>Q-</option> 
+                                <option>R-</option> 
+                                <option>S-</option> 
+                                <option>T-</option> 
+                                <option>U-</option> 
+                                <option>V-</option> 
+                                <option>W-</option> 
+                                <option>X-</option>
+                                <option>Y-</option>
+                                <option>Z-</option>
+                            </select></td><td class="dtype"><select class="dset">
+                                <option>-</option>
+                                <option>C</option>    
+                                <option>DS</option> 
+                                <option>S</option> 
+                                <option>L</option> 
+                                <option>G</option> 
+                                <option>M</option> 
+                                <option>E</option> 
+                                <option>P</option> 
+                                <option>W</option> 
+                            </select></td>
+                            <td><input type="input" name="qno" placeholder='001'></td>
+                            <td class="rno"><select class="dset">
+                                <option>D1</option>    
+                                <option>D2</option> 
+                                <option>D3</option> 
+                                <option>D4</option> 
+                                <option>D5</option> 
+                                <option>D6</option> 
+                                <option>D7</option> 
+                                <option>D8</option> 
+                                <option>D9</option> 
+                                <option>0</option>
+                            </select></td>
+                            <td><input type="input" name="dtitle" placeholder='Eg. "Functional Description"''></td>
+                            <td><input type="checkbox" name="CHK1"></td>
+                            <td><input type="checkbox" name="CHK2"></td>
+                            <td><input type="checkbox" name="CHK3"></td>
+                            <td><input type="checkbox" name="CHK4"></td>
+                            <td><input type="checkbox" name="CHK5"></td>
+                            <td><input type="checkbox" name="CHK6"></td>
+                            <td><input type="checkbox" name="CHK7"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="file" id="file" name="document"></td>
+                            <td><input type="input" name="qno" value='Q'></td>
+                            <td class="dset"><select class="dset">
+                                <option>-</option>    
+                                <option>X-</option> 
+                                <option>A-</option> 
+                                <option>B-</option> 
+                                <option>C-</option> 
+                                <option>D-</option> 
+                                <option>E-</option> 
+                                <option>F-</option> 
+                                <option>G-</option> 
+                                <option>H-</option> 
+                                <option>I-</option> 
+                                <option>J-</option> 
+                                <option>K-</option> 
+                                <option>L-</option> 
+                                <option>M-</option> 
+                                <option>N-</option> 
+                                <option>O-</option> 
+                                <option>P-</option> 
+                                <option>Q-</option> 
+                                <option>R-</option> 
+                                <option>S-</option> 
+                                <option>T-</option> 
+                                <option>U-</option> 
+                                <option>V-</option> 
+                                <option>W-</option> 
+                                <option>X-</option>
+                                <option>Y-</option>
+                                <option>Z-</option>
+                            </select></td><td class="dtype"><select class="dset">
+                                <option>-</option>
+                                <option>C</option>    
+                                <option>DS</option> 
+                                <option>S</option> 
+                                <option>L</option> 
+                                <option>G</option> 
+                                <option>M</option> 
+                                <option>E</option> 
+                                <option>P</option> 
+                                <option>W</option> 
+                            </select></td>
+                            <td><input type="input" name="qno" placeholder='001'></td>
+                            <td class="rno"><select class="dset">
+                                <option>D1</option>    
+                                <option>D2</option> 
+                                <option>D3</option> 
+                                <option>D4</option> 
+                                <option>D5</option> 
+                                <option>D6</option> 
+                                <option>D7</option> 
+                                <option>D8</option> 
+                                <option>D9</option> 
+                                <option>0</option>
+                            </select></td>
+                            <td><input type="input" name="dtitle" placeholder='Eg. "Functional Description"''></td>
+                            <td><input type="checkbox" name="CHK1"></td>
+                            <td><input type="checkbox" name="CHK2"></td>
+                            <td><input type="checkbox" name="CHK3"></td>
+                            <td><input type="checkbox" name="CHK4"></td>
+                            <td><input type="checkbox" name="CHK5"></td>
+                            <td><input type="checkbox" name="CHK6"></td>
+                            <td><input type="checkbox" name="CHK7"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="file" id="file" name="document"></td>
+                            <td><input type="input" name="qno" value='Q'></td>
+                            <td class="dset"><select class="dset">
+                                <option>-</option>    
+                                <option>X-</option> 
+                                <option>A-</option> 
+                                <option>B-</option> 
+                                <option>C-</option> 
+                                <option>D-</option> 
+                                <option>E-</option> 
+                                <option>F-</option> 
+                                <option>G-</option> 
+                                <option>H-</option> 
+                                <option>I-</option> 
+                                <option>J-</option> 
+                                <option>K-</option> 
+                                <option>L-</option> 
+                                <option>M-</option> 
+                                <option>N-</option> 
+                                <option>O-</option> 
+                                <option>P-</option> 
+                                <option>Q-</option> 
+                                <option>R-</option> 
+                                <option>S-</option> 
+                                <option>T-</option> 
+                                <option>U-</option> 
+                                <option>V-</option> 
+                                <option>W-</option> 
+                                <option>X-</option>
+                                <option>Y-</option>
+                                <option>Z-</option>
+                            </select></td><td class="dtype"><select class="dset">
+                                <option>-</option>
+                                <option>C</option>    
+                                <option>DS</option> 
+                                <option>S</option> 
+                                <option>L</option> 
+                                <option>G</option> 
+                                <option>M</option> 
+                                <option>E</option> 
+                                <option>P</option> 
+                                <option>W</option> 
+                            </select></td>
+                            <td><input type="input" name="qno" placeholder='001'></td>
+                            <td class="rno"><select class="dset">
+                                <option>D1</option>    
+                                <option>D2</option> 
+                                <option>D3</option> 
+                                <option>D4</option> 
+                                <option>D5</option> 
+                                <option>D6</option> 
+                                <option>D7</option> 
+                                <option>D8</option> 
+                                <option>D9</option> 
+                                <option>0</option>
+                            </select></td>
+                            <td><input type="input" name="dtitle" placeholder='Eg. "Functional Description"''></td>
+                            <td><input type="checkbox" name="CHK1"></td>
+                            <td><input type="checkbox" name="CHK2"></td>
+                            <td><input type="checkbox" name="CHK3"></td>
+                            <td><input type="checkbox" name="CHK4"></td>
+                            <td><input type="checkbox" name="CHK5"></td>
+                            <td><input type="checkbox" name="CHK6"></td>
+                            <td><input type="checkbox" name="CHK7"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="file" id="file" name="document"></td>
+                            <td><input type="input" name="qno" value='Q'></td>
+                            <td class="dset"><select class="dset">
+                                <option>-</option>    
+                                <option>X-</option> 
+                                <option>A-</option> 
+                                <option>B-</option> 
+                                <option>C-</option> 
+                                <option>D-</option> 
+                                <option>E-</option> 
+                                <option>F-</option> 
+                                <option>G-</option> 
+                                <option>H-</option> 
+                                <option>I-</option> 
+                                <option>J-</option> 
+                                <option>K-</option> 
+                                <option>L-</option> 
+                                <option>M-</option> 
+                                <option>N-</option> 
+                                <option>O-</option> 
+                                <option>P-</option> 
+                                <option>Q-</option> 
+                                <option>R-</option> 
+                                <option>S-</option> 
+                                <option>T-</option> 
+                                <option>U-</option> 
+                                <option>V-</option> 
+                                <option>W-</option> 
+                                <option>X-</option>
+                                <option>Y-</option>
+                                <option>Z-</option>
+                            </select></td><td class="dtype"><select class="dset">
+                                <option>-</option>
+                                <option>C</option>    
+                                <option>DS</option> 
+                                <option>S</option> 
+                                <option>L</option> 
+                                <option>G</option> 
+                                <option>M</option> 
+                                <option>E</option> 
+                                <option>P</option> 
+                                <option>W</option> 
+                            </select></td>
+                            <td><input type="input" name="qno" placeholder='001'></td>
+                            <td class="rno"><select class="dset">
+                                <option>D1</option>    
+                                <option>D2</option> 
+                                <option>D3</option> 
+                                <option>D4</option> 
+                                <option>D5</option> 
+                                <option>D6</option> 
+                                <option>D7</option> 
+                                <option>D8</option> 
+                                <option>D9</option> 
+                                <option>0</option>
+                            </select></td>
+                            <td><input type="input" name="dtitle" placeholder='Eg. "Functional Description"''></td>
+                            <td><input type="checkbox" name="CHK1"></td>
+                            <td><input type="checkbox" name="CHK2"></td>
+                            <td><input type="checkbox" name="CHK3"></td>
+                            <td><input type="checkbox" name="CHK4"></td>
+                            <td><input type="checkbox" name="CHK5"></td>
+                            <td><input type="checkbox" name="CHK6"></td>
+                            <td><input type="checkbox" name="CHK7"></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <label for="comment">Additonal Comments</label><br>
+                    <textarea type="text" name="comment" class="sq-cmt"></textarea>
+                    <br>
+                    <div class="btncontainer">
+                    <button class="submit" name="submit" id="submit"> Upload </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="widget pending-container">
+            <h2>Pending Review</h2><br>
+            <table class="pending-table">
+                <tr>
+                    <th>SQ No.</th>
+                    <th>Project No.</th>
+                    <th>PM</th>
+                    <th>Issued by</th>
+                    <th>Issued On</th>
+                    <th>Due Date</th>
+                    <th>Time Elapsed</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <!-- Link will take to get method page with squad check data from database -->
+                    <td><a href="#">SQ0012</a></td>
+                    <td>P3963</td>
+                    <td>AA</td>
+                    <td>LA</td>
+                    <td>15/12/2023</td>
+                    <td>15/01/2023</td>
+                    <td>23:21:59</td>
+                    <td>Pending</td>
+                </tr>
+                <tr>
+                    <td><a href="#">SQ0013</a></td>
+                    <td>P3899</td>
+                    <td>MS</td>
+                    <td>LA</td>
+                    <td>15/12/2023</td>
+                    <td>15/01/2023</td>
+                    <td>23:21:59</td>
+                    <td>Pending</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</main>
+</body>
+</html>
