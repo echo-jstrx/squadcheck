@@ -145,7 +145,7 @@
         .formcontainer td input {
             border: none;
             padding: 5px 10px; 
-            max-height: 100%; max-width: 70px;
+            max-height: 100%; max-width: 100%;
         }
         .formcontainer td input:focus{
             border: none;
