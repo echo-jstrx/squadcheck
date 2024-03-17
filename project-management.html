@@ -41,7 +41,11 @@
         <script>
             function toggle(id) {
                 var element = document.getElementById(id);
+                var indicator_id = concat("indicator-", id);
+                var indicator = document.getElementById(indicator_id);
                 element.classList.toggle("hidden");
+                indicator.ClassList.toggle("fa-chevron-down");
+                indicator.ClassList.toggle("fa-chevron-right");
             }
         </script>
         <!-- PHP loop here for each project -->
@@ -49,7 +53,7 @@
             <!-- "toggle(1) and id="1" need to iterated through with PHP when looped to allow hiding of details. -->
             <a onclick="toggle(1);" class="p-hd-btn">
                 <h2 class="p-h2">
-                    <i class="fa-solid fa-folder fa-xl" style="color: #fec158;"></i>&nbsp;&nbsp;P4972 - Example Project Title 1&nbsp;&nbsp;<i class="fa-solid fa-chevron-down fa-sm" style="color: #000000;"></i>
+                    <i class="fa-solid fa-folder fa-xl" style="color: #fec158;"></i>&nbsp;&nbsp;P4972 - Example Project Title 1&nbsp;&nbsp;<i class="fa-solid fa-chevron-down fa-sm" style="color: #000000;" id="indicator-1"></i>
                 </h2>
             </a> 
             <div class="pm-sub-container" id="1">
@@ -299,7 +303,11 @@
         <!-- remove with addition of PHP (repeated code) -->
         <div class="p-man-container">
             <!-- "toggle(1) and id="1" need to iterated through with PHP when looped to allow hiding of details. -->
-            <a onclick="toggle(2);" class="p-hd-btn"><h2 class="p-h2"><i class="fa-solid fa-folder fa-xl" style="color: #fec158;"></i>&nbsp;&nbsp;P4972 - Example Project Title 2</h2></a>
+            <a onclick="toggle(2);" class="p-hd-btn">
+                <h2 class="p-h2">
+                    <i class="fa-solid fa-folder fa-xl" style="color: #fec158;"></i>&nbsp;&nbsp;P4972 - Example Project Title 2&nbsp;&nbsp;<i class="fa-solid fa-chevron-down fa-sm" style="color: #000000;" id="indicator-2"></i>
+                </h2>
+            </a>
             <div class="pm-sub-container" id="2">
                 <!-- List of Latest Documents -->
                 <div class="document-list">
