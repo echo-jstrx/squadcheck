@@ -393,5 +393,5 @@
         }
 
         .doc-title{
-            text-wrap: nowrap;
+            white-space: nowrap;
         }
