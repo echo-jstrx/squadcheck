@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/a6609ff7b3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="horizontal-nav">
+        <div class="logo-container">
+            <a href="#" class="active">www.squad-check.com</a>
+        </div>
+        <div class="nav-container">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Help</a>
+        </div>
+    </div>
+    <div class="vertical-nav">
+        <a href="#">Profile</a>
+        <a href="#">My Company</a>
+        <a href="#">All Projects</a>
+        <a href="team-members.html">Team Members</a>
+        <a href="#">Assigned Tasks</a>
+        <a href="squad-check.html" class="active">Squad Check</a>
+        <a href="project-management.html">Project Management</a>
+        <a href="#">Document Control</a>
+        <a href="#">Purchasing</a>
+        <a href="#">Inventory Management</a>
+        <a href="#">Standard Forms</a>
+        <a href="#">Timesheet</a>
+        <a href="#">Notifications</a>
+        <hr>
+        <a href="#">Feedback</a>
+        <a href="#">Logout</a>
+    </div>	
+    <div class="pro-container">
+        <h1 class="p-h1">Squad Check Documents, SQ0014972</h1>
+        <script>
+            function toggle(id) {
+                var element = document.getElementById(id);
+                element.classList.toggle("hidden");
+            }
+        </script>
+        <!-- PHP loop here for each project -->
+        <div class="p-man-container">
+            <!-- "toggle(1) and id="1" need to iterated through with PHP when looped to allow hiding of details. -->
+            <a onclick="toggle(1);" class="p-hd-btn">
+                <h2 class="p-h2">
+                    Q15789-E100A - P&ID
+                </h2>
+            </a> 
+            <div class="pm-sub-container" id="1">
+                <!-- List of Latest Documents -->
+                <div class="document-list">
+                    <h3 class="p-h3">Revision D1</h3>
+                    <div class="document-item">
+                        <i class="fa-solid fa-file-pdf fa-lg" style="color: #000000;"></i>&nbsp;&nbsp;
+                        <a class="document-link" href="#">
+                            <span class="document-name sqstdwid">John Doe</span>
+                        </a>
+                        <span class="date sqstdwid">May 1, 2025</span>
+                        <a class="document-link" href="#">
+                            <span class="sqstdwid">Approved</span>
+                        </a>
+                        <a class="document-link" href="#">
+                            <span class="sqcomments sqstdwid">View Comments</span>
+                        </a>
+                    </div>
+                    <div class="document-item">
+                        <i class="fa-solid fa-file-pdf fa-lg" style="color: #000000;"></i>&nbsp;&nbsp;
+                        <a class="document-link" href="#">
+                            <span class="document-name sqstdwid">John Doe</span>
+                        </a>
+                        <span class="date sqstdwid">May 1, 2025</span>
+                        <a class="document-link" href="#">
+                            <span class="sqstdwid">Checked & Approved</span>
+                        </a>
+                        <a class="document-link" href="#">
+                            <span class="sqcomments sqstdwid">View Comments</span>
+                        </a>
+                    </div>
+                    <div class="document-item">
+                        <i class="fa-solid fa-file-pdf fa-lg" style="color: #000000;"></i>&nbsp;&nbsp;
+                        <a class="document-link" href="#">
+                            <span class="document-name sqstdwid">John Doe</span>
+                        </a>
+                        <span class="date sqstdwid">May 1, 2025</span>
+                        <a class="document-link" href="#">
+                            <span class="sqstdwid">Approved with Comments</span>
+                        </a>
+                        <a class="document-link" href="#">
+                            <span class="sqcomments sqstdwid">View Comments</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Second List of Documents -->
+                <div class="document-list">
+                    <h3 class="p-h3">Revision 0</h3>
+                    <div class="document-item">
+                        <i class="fa-solid fa-file-pdf fa-lg" style="color: #000000;"></i>&nbsp;&nbsp;
+                        <a class="document-link" href="#">
+                            <span class="document-name sqstdwid">John Doe</span>
+                        </a>
+                        <span class="date sqstdwid">May 1, 2025</span>
+                        <a class="document-link" href="#">
+                            <span class="sqstdwid">Approved</span>
+                        </a>
+                        <a class="document-link" href="#">
+                            <span class="sqcomments sqstdwid">View Comments</span>
+                        </a>
+                    </div>
+                    <div class="document-item">
+                        <i class="fa-solid fa-file-pdf fa-lg" style="color: #000000;"></i>&nbsp;&nbsp;
+                        <a class="document-link" href="#">
+                            <span class="document-name sqstdwid">John Doe</span>
+                        </a>
+                        <span class="date sqstdwid">May 1, 2025</span>
+                        <a class="document-link" href="#">
+                            <span class="sqstdwid">Checked & Approved</span>
+                        </a>
+                        <a class="document-link" href="#">
+                            <span class="sqcomments sqstdwid">View Comments</span>
+                        </a>
+                    </div>
+                    <div class="document-item">
+                        <i class="fa-solid fa-file-pdf fa-lg" style="color: #000000;"></i>&nbsp;&nbsp;
+                        <a class="document-link" href="#">
+                            <span class="document-name sqstdwid">John Doe</span>
+                        </a>
+                        <span class="date sqstdwid">May 1, 2025</span>
+                        <a class="document-link" href="#">
+                            <span class="sqstdwid">Approved with Comments</span>
+                        </a>
+                        <a class="document-link" href="#">
+                            <span class="sqcomments sqstdwid">View Comments</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Third List of Documents -->
+                
+                
+            </div>
+        </div>
+        <!-- remove with addition of PHP (repeated code) -->
+        <div class="p-man-container">
+            <!-- "toggle(1) and id="1" need to iterated through with PHP when looped to allow hiding of details. -->
+            <a onclick="toggle(2);" class="p-hd-btn">
+                <h2 class="p-h2">
+                    Q15789-G001 - General Arrangement
+                </h2>
+            </a> 
+            <div class="pm-sub-container" id="2">
+                <!-- List of Latest Documents -->
+                <div class="document-list">
+                    <h3 class="p-h3">Revision D1</h3>
+                    <div class="document-item">
+                        <i class="fa-solid fa-file-pdf fa-lg" style="color: #000000;"></i>&nbsp;&nbsp;
+                        <a class="document-link" href="#">
+                            <span class="document-name sqstdwid">John Doe</span>
+                        </a>
+                        <span class="date sqstdwid">May 1, 2025</span>
+                        <a class="document-link" href="#">
+                            <span class="sqstdwid">Approved</span>
+                        </a>
+                        <a class="document-link" href="#">
+                            <span class="sqcomments sqstdwid">View Comments</span>
+                        </a>
+                    </div>
+                    <div class="document-item">
+                        <i class="fa-solid fa-file-pdf fa-lg" style="color: #000000;"></i>&nbsp;&nbsp;
+                        <a class="document-link" href="#">
+                            <span class="document-name sqstdwid">John Doe</span>
+                        </a>
+                        <span class="date sqstdwid">May 1, 2025</span>
+                        <a class="document-link" href="#">
+                            <span class="sqstdwid">Checked & Approved</span>
+                        </a>
+                        <a class="document-link" href="#">
+                            <span class="sqcomments sqstdwid">View Comments</span>
+                        </a>
+                    </div>
+                    <div class="document-item">
+                        <i class="fa-solid fa-file-pdf fa-lg" style="color: #000000;"></i>&nbsp;&nbsp;
+                        <a class="document-link" href="#">
+                            <span class="document-name sqstdwid">John Doe</span>
+                        </a>
+                        <span class="date sqstdwid">May 1, 2025</span>
+                        <a class="document-link" href="#">
+                            <span class="sqstdwid">Approved with Comments</span>
+                        </a>
+                        <a class="document-link" href="#">
+                            <span class="sqcomments sqstdwid">View Comments</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Second List of Documents -->
+                <div class="document-list">
+                    <h3 class="p-h3">Revision 0</h3>
+                    <div class="document-item">
+                        <i class="fa-solid fa-file-pdf fa-lg" style="color: #000000;"></i>&nbsp;&nbsp;
+                        <a class="document-link" href="#">
+                            <span class="document-name sqstdwid">John Doe</span>
+                        </a>
+                        <span class="date sqstdwid">May 1, 2025</span>
+                        <a class="document-link" href="#">
+                            <span class="sqstdwid">Approved</span>
+                        </a>
+                        <a class="document-link" href="#">
+                            <span class="sqcomments sqstdwid">View Comments</span>
+                        </a>
+                    </div>
+                    <div class="document-item">
+                        <i class="fa-solid fa-file-pdf fa-lg" style="color: #000000;"></i>&nbsp;&nbsp;
+                        <a class="document-link" href="#">
+                            <span class="document-name sqstdwid">John Doe</span>
+                        </a>
+                        <span class="date sqstdwid">May 1, 2025</span>
+                        <a class="document-link" href="#">
+                            <span class="sqstdwid">Checked & Approved</span>
+                        </a>
+                        <a class="document-link" href="#">
+                            <span class="sqcomments sqstdwid">View Comments</span>
+                        </a>
+                    </div>
+                    <div class="document-item">
+                        <i class="fa-solid fa-file-pdf fa-lg" style="color: #000000;"></i>&nbsp;&nbsp;
+                        <a class="document-link" href="#">
+                            <span class="document-name sqstdwid">John Doe</span>
+                        </a>
+                        <span class="date sqstdwid">May 1, 2025</span>
+                        <a class="document-link" href="#">
+                            <span class="sqstdwid">Approved with Comments</span>
+                        </a>
+                        <a class="document-link" href="#">
+                            <span class="sqcomments sqstdwid">View Comments</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Third List of Documents -->
+                <div class="document-list">
+                    <h3 class="p-h3">Revision 1</h3>
+                    <div class="document-item">
+                        <i class="fa-solid fa-file-pdf fa-lg" style="color: #000000;"></i>&nbsp;&nbsp;
+                        <a class="document-link" href="#">
+                            <span class="document-name sqstdwid">John Doe</span>
+                        </a>
+                        <span class="date sqstdwid">May 1, 2025</span>
+                        <a class="document-link" href="#">
+                            <span class="sqstdwid">Approved</span>
+                        </a>
+                        <a class="document-link" href="#">
+                            <span class="sqcomments sqstdwid">View Comments</span>
+                        </a>
+                    </div>
+                    <div class="document-item">
+                        <i class="fa-solid fa-file-pdf fa-lg" style="color: #000000;"></i>&nbsp;&nbsp;
+                        <a class="document-link" href="#">
+                            <span class="document-name sqstdwid">John Doe</span>
+                        </a>
+                        <span class="date sqstdwid">May 1, 2025</span>
+                        <a class="document-link" href="#">
+                            <span class="sqstdwid">Checked & Approved</span>
+                        </a>
+                        <a class="document-link" href="#">
+                            <span class="sqcomments sqstdwid">View Comments</span>
+                        </a>
+                    </div>
+                    <div class="document-item">
+                        <i class="fa-solid fa-file-pdf fa-lg" style="color: #000000;"></i>&nbsp;&nbsp;
+                        <a class="document-link" href="#">
+                            <span class="document-name sqstdwid">John Doe</span>
+                        </a>
+                        <span class="date sqstdwid">May 1, 2025</span>
+                        <a class="document-link" href="#">
+                            <span class="sqstdwid">Approved with Comments</span>
+                        </a>
+                        <a class="document-link" href="#">
+                            <span class="sqcomments sqstdwid">View Comments</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
