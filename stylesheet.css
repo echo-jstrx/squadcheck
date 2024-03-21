@@ -322,6 +322,7 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             margin: 5px 0px;
+            width: fit-content;
         }
         .document-item .date {
             font-size: 14px;
