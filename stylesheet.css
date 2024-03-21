@@ -390,3 +390,8 @@
 
         .shield_icon{
             color: green;
+        }
+
+        .doc-title{
+            text-wrap: nowrap;
+        }
