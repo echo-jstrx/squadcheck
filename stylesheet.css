@@ -356,7 +356,13 @@
             min-width: 200px;
             text-align: left;
         }
-
+        .sqstdwid{
+            min-width: 175px;
+            text-align: left;
+        }
+        .sqcomments{
+            text-align: right;
+        }
         .document-link{
             text-decoration: none;
             color: black;
