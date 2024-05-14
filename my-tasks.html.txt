@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/a6609ff7b3.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script>
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+        // ajax call GET to get document info from SQL database
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+        // ajax call POST to assign approval status to SQL database
+    }
+    </script>
+</head>
+<body>
+    <div class="horizontal-nav">
+        <div class="logo-container">
+            <a href="#" class="active">www.squad-check.com</a>
+        </div>
+        <div class="nav-container">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Help</a>
+        </div>
+    </div>
+    <div class="vertical-nav">
+        <a href="#">Profile</a>
+        <a href="#">My Company</a>
+        <a href="#">All Projects</a>
+        <a href="team-members.html">Team Members</a>
+        <a href="#">Assigned Tasks</a>
+        <a href="squad-check.html">Squad Check</a>
+        <a href="project-management.html" class="active">Project Management</a>
+        <a href="#">Document Control</a>
+        <a href="#">Purchasing</a>
+        <a href="#">Inventory Management</a>
+        <a href="#">Standard Forms</a>
+        <a href="#">Timesheet</a>
+        <a href="#">Notifications</a>
+        <hr>
+        <a href="#">Feedback</a>
+        <a href="#">Logout</a>
+    </div>	
+    <div class="pro-container">
+        <h1 class="p-h1">My Tasks</h1>
+        <script>
+            function toggle(id) {
+                var element = document.getElementById(id);
+                // var indicator_id = concat("indicator-", id);
+                // var indicator = document.getElementById(indicator_id);
+                element.classList.toggle("hidden");
+                // indicator.ClassList.toggle("fa-chevron-down");
+                // indicator.ClassList.toggle("fa-chevron-right");
+            }
+        </script>
+        <div class="search-bar">
+            <div class="search-icon">
+            </div>
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </div>
+
+        <!-- remove with addition of PHP (repeated code) -->
+        <div class="p-man-container">
+            <!-- "toggle(1) and id="1" need to iterated through with PHP when looped to allow hiding of details. -->
+            <a onclick="toggle(2);" class="p-hd-btn">
+                <h2 class="p-h2">
+                    <i class="fa-solid fa-folder fa-xl" style="color: #fec158;"></i>&nbsp;&nbsp;P4972 - Example Project Title 2&nbsp;&nbsp;<i class="fa-solid fa-chevron-down fa-sm" style="color: #000000;" id="indicator-2"></i>
+                </h2>
+            </a>
+            
+            <div class="pm-sub-container" id="2">
+                <!-- List of Latest Documents -->
+                <div class="document-list">
+                    <a class="sqno" href="#">
+                        <h3 class="p-h3">SQ0014972</h3>
+                    </a>
+                    <div class="document-item">
+                        <a class="document-link" href="#">
+                            <span class="document-name lftwid">Q15969-C001_D1.pdf</span>
+                        </a>
+                        <span class="date ctrwid">Rev D1</span>
+                        <span class="date ctrwid">May 1, 2025</span>
+                        <a class="document-link" href="details">
+                            <span class="ctrwid">John Doe</span>
+                        </a>
+                        <button class="nobtn" onclick="openForm()">
+                            <span class="rgtwid">Review</span>
+                        </button>
+                    </div>
+                    <div class="document-item">
+                        <a class="document-link" href="#">
+                            <span class="document-name lftwid">P4972_WR.pdf</span>
+                        </a>
+                        <span class="date ctrwid">Rev D1</span>
+                        <span class="date ctrwid">May 1, 2025</span>
+                        <a class="document-link" href="details">
+                            <span class="ctrwid">John Doe</span>
+                        </a>
+                        <button class="nobtn" onclick="openForm()">
+                            <span class="rgtwid">Review</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- REPEAT -->
+                <div class="document-list">
+                    <a class="sqno" href="#">
+                        <h3 class="p-h3">SQ0024972</h3>
+                    </a>
+                    <div class="document-item">
+                        <a class="document-link" href="#">
+                            <span class="document-name lftwid">Q15969-C005_D3.pdf</span>
+                        </a>
+                        <span class="date ctrwid">Rev D3</span>
+                        <span class="date ctrwid">May 1, 2025</span>
+                        <a class="document-link" href="details">
+                            <span class="ctrwid">John Doe</span>
+                        </a>
+                        <button class="nobtn" onclick="openForm()">
+                            <span class="rgtwid">Review</span>
+                        </button>
+                    </div>
+                    <div class="document-item">
+                        <a class="document-link" href="#">
+                            <span class="document-name lftwid">P4972_WR.pdf</span>
+                        </a>
+                        <span class="date ctrwid">Rev D1</span>
+                        <span class="date ctrwid">May 1, 2025</span>
+                        <a class="document-link" href="details">
+                            <span class="ctrwid">John Doe</span>
+                        </a>
+                        <button class="nobtn" onclick="openForm()">
+                            <span class="rgtwid">Review</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- The form -->
+<div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+        <h1>Review</h1>
+        <!-- Comment input (long text) -->
+        <textarea placeholder="Enter Comment" name="comment" rows="4"></textarea><br>
+        <!-- Radio buttons -->
+        <br><br><label>Select an option:</label><br>
+        <input type="radio" name="options" value="Option 2"> Comments Attached <br>
+        <input type="radio" name="options" value="Option 3"> Approved with Comments <br>
+        <input type="radio" name="options" value="Option 4"> Checked & Approved <br>
+        <input type="radio" name="options" value="Option 1"> For Information Only <br><br><br>
+        <label>Upload reference documents:</label><br><br>
+        <input type="file"><br><br>
+        <!-- Passcode input -->
+        <input type="password" placeholder="Enter Passcode" name="passcode" required>
+        <!-- Submit button -->
+        <button type="submit" class="btn">Submit</button>
+        <!-- Close button -->
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+</div>
+
+</body>
+</html>
